@@ -1,10 +1,10 @@
 # festival_schedule_generator_challenge
 Festival Schedule Generator Challange solution in cpp.
 
-Two solutions are presented
+Problem definition can be found at [this link](https://werkenbijdemcon.nl/challenge-4-festival-schedule-generator/).  
+Two solutions are presented.
 
-
-# # Solution 1 with priority queue (preferred) 
+## Solution 1 with priority queue (preferred) 
 
 This solution requires a sorted input.
 While browsing through the vector of shows one can create a priority queue, which size corresponds to the number of the currently planned stages at that moment.  
@@ -20,7 +20,7 @@ Otherwise the current show cannot fit any stages and a new stage needs to be cre
  Time complexity: ~O(nlog(n)) for sorting and ~O(nlog(n)) for the algorithm using the priority queue.
 
 
- # # Solution 2 with nested loops (not preferred)
+ ## Solution 2 with nested loops (not preferred)
 
 This Solution does not necessarily require a sorted input, however in order to present a proper (sorted) planning as output, sorting needs to happen at some point (can before execution as  presented in this solutin or after it on the result -the planning- itself).
 
@@ -29,7 +29,7 @@ If the current show cannot fit any stage, then a new stage is created and the sh
   
 Time complexity: ~O(nlog(n)) for sorting and ~O(n*n) for the algorithm using nested loops
 
-# # Input format
+## Input format
 
 Input must be preseted as a txt file named "input.txt" where each line contains the following information about one show:
 * show name
@@ -37,3 +37,8 @@ Input must be preseted as a txt file named "input.txt" where each line contains 
 * show end time (as offset from start time of the festival, in hours)
 
 "show name", "show start time" and "show end time" are separated by one blank space character (" ").
+
+## Execution
+
+Build the code, put the input file in the same folder as the executable and execute from terminal.  
+A sample "input.txt" is present in the repository as well as a pre-built executable for MacOS systems "festival_schedule_generator_challenge.out".
