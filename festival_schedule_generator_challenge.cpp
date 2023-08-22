@@ -183,12 +183,12 @@ bool ReadInputFromFile(string fileName, vector<Show>& shows)
 	if(file.is_open())
 	{
 		string line;
-		while (getline(file, line)) //readKubne
+		while (getline(file, line)) //read line
 		{
 			std::stringstream ss(line);
 			string token;
 			vector<string> showInfo;
-			while (std::getline(ss, token, ' '))
+			while (std::getline(ss, token, ' ')) //parse input per line
 			{
 				showInfo.push_back(token);
 				token.clear();
